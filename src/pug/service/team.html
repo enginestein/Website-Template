@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/teamstyle.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+        <form>
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input id="fullname" type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input id="dob" type="date" placeholder="Enter birth date" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input id="email" type="text" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input id="mobile" type="number" placeholder="Enter mobile number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select id="gender" required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input id="occupation" type="text" placeholder="Enter your occupation" required>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Field</label>
+                            <select id="field" required>
+                                <option disabled selected>Select Field Of Product</option>
+                                <option>Web Application</option>
+                                <option>Android Application</option>
+                                <option>IOS Application</option>
+                                <option>.NET Application</option>
+                                <option>Embedded Application</option>
+                                <option>Embedded Software</option>
+                                <option>Game Development</option>
+                                <option>Hardware Development</option>
+                                <option>IT Consulting</option>
+                                <option>Artificial Intelligence & Machine Learning</option>
+                                <option>Database Solution</option>
+                                <option>Cloud Development</option>
+                                <option>Custom Software</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Company Name</label>
+                            <input id="company" type="text" placeholder="Enter your company's name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Company Work</label>
+                            <input id="companywork" type="text" placeholder="Enter your company's work" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Address</label>
+                            <input id="address" type="text" placeholder="Enter Your Address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <input type="checkbox" id="signupCheck" required />
+                        <label for="signupCheck">I accept all terms & conditions</label>
+                    </div>
+                    <button class="nextBtn" onclick="sendEmail()">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+        </form>
+    </div>
+    <script>
+        function sendEmail() {
+            const fullname = document.getElementById('fullname').value;
+            const dob = document.getElementById('dob').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            const gender = document.getElementById('gender').value;
+            const occupation = document.getElementById('occupation').value;
+            const field = document.getElementById('field').value;
+            const company = document.getElementById('company').value;
+            const companywork = document.getElementById('companywork').value;
+            const address = document.getElementById('address').value;
+            
+            const subject = encodeURIComponent('Registration Form Submission');
+            const body = encodeURIComponent(`
+                Full Name: ${fullname}
+                Date of Birth: ${dob}
+                Email: ${email}
+                Mobile Number: ${mobile}
+                Gender: ${gender}
+                Occupation: ${occupation}
+                Field: ${field}
+                Company Name: ${company}
+                Company Work: ${companywork}
+                Address: ${address}
+            `);
+            
+            window.location.href = `mailto:maatierra@outlook.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+    <script src="teamjs.js"></script>
+</body>
+</html>
+
