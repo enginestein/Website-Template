@@ -1,0 +1,31 @@
+extends layouts/LayoutTheme
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/Services
+include mixins/home/landing/Features
+include mixins/home/landing/Section1
+include mixins/home/landing/Section2
+include mixins/home/landing/Autopilot
+include mixins/home/landing/Autopilot2
+include mixins/home/landing/Cta
+include mixins/home/landing/Footer
+
+append variables
+
+
+append styles  
+
+prepend scripts
+ 
+
+block content 
+  +HeroHeader
+  +Services 
+  +Features
+  +Section1
+  +Section2
+  +Autopilot
+  +Autopilot2
+  +Cta
+  +PreFooter
+
+ 
