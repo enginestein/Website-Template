@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Hind Siliguri
+- Font Author: Copyright (c) 2015 Indian Type Foundry (info@indiantypefoundry.com)
+- Font Source: http://fonts.gstatic.com/s/hindsiliguri/v7/ijwTs5juQtsyLLR5jN4cxBEofJvQxuk0Nig.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
