@@ -1,0 +1,73 @@
+append variables
+  -
+    const footerIcon = [ 
+      {
+        img: `${CWD}assets/img/gallery/linkedin-line1.svg`,
+        link:'#!',
+        alt:'in'
+      },
+      {
+        img: `${CWD}assets/img/gallery/facebook-line1.svg`,
+        link:'#!',
+        alt:'fb'
+      },
+      {
+        img: `${CWD}assets/img/gallery/twitter-line1.svg`,
+        link:'#!',
+        alt:'twitter'
+      },
+      {
+        img: `${CWD}assets/img/gallery/instagram-line1.svg`,
+        link:'#!',
+        alt:'instragram'
+      }
+    ]
+
+mixin FooterList(...items)
+  each item in items
+    li.lh-lg
+      a.text-500.footer-link(href='#!').text-light=item
+
+mixin Footer 
+  +Section.py-0.bg-1000
+    .row.justify-content-md-between.justify-content-evenly.py-3
+      .col-12.col-sm-8.col-md-6.col-lg-auto.text-center.text-md-start 
+        p.fs--1.my-2.fw-bold.text-200 &copy; 2022 Your Company Inc
+      .col-12.col-sm-8.col-md-6
+        p.fs--1.my-2.text-center.text-md-end.text-200  Made with&nbsp;
+          svg.bi.bi-suit-heart-fill(xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='#F95C19' viewBox='0 0 16 16')
+            path(d='M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z')
+
+          |&nbsp;by&nbsp;
+          a(href='https://themewagon.com/' target='_blank').fw-bold.text-info.text-200 ThemeWagon 
+
+mixin PreFooter 
+  section.py-0.bg-1000
+    .container
+      .row.py-7
+        .col-12.col-sm-12.col-lg-6.mb-4.order-0.order-sm-0
+          a(href='#').text-decoration-none
+            img(src=`${CWD}assets/img/icons/Logo2.png` height="51" alt='' ) 
+
+          p.text-light.mt-4.mb-0 EU: +49 9999 0000
+          p.text-light.mb-0 US: +00 4444 0000
+          p.text-light.mt-5 info@maatierra.ee
+          .d-flex
+            each item in footerIcon
+              a(href=`${item.link}`)
+                img(src=`${item.img}` alt=`${item.alt}` class='me-xl-3 me-1' width:'20px' height:'20px')
+        .col-3.col-sm-4.col-lg-2.mb-3.order-2.order-sm-1
+          h5.lh-lg.fw-bold.text-light.font-sans-serif About Us
+          ul.list-unstyled.text-light.mb-md-4
+            +FooterList('Newsroom','Blog','Maa Tierra API', 'Gift cards', 'Career', 'Maa Tierra driving jobs')
+
+        .col-6.col-sm-4.col-lg-2.mb-3.order-3.order-sm-2
+          h5.lh-lg.fw-bold.text-light.font-sans-serif Offerings
+          ul.list-unstyled.text-light.mb-md-4.mb-lg-0
+            +FooterList('Maa Tierra Eats','Maa Tierra Business','Guhub Freight', 'Maa Tierra Health')
+        
+        .col-6.col-sm-4.col-lg-2.mb-3.order-3.order-sm-2
+          h5.lh-lg.fw-bold.text-light.font-sans-serif  Support
+          ul.list-unstyled.text-light.mb-md-4.mb-lg-0
+            +FooterList('Terminal Conditions', 'About Us','Contact US', 'Terms of Use')
+    +Footer

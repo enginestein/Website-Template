@@ -1,0 +1,40 @@
+extends Layout
+include ../mixins/navbars/Navbar
+include ../mixins/Variables
+
+
+append variables
+  - var attrsBody = {  };
+  - var breakPoint = 'lg';
+ 
+
+
+append headScripts
+
+block prepend styles
+  link(rel="preconnect", href="https://fonts.googleapis.com")
+  link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+  link(href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap", rel="stylesheet")
+ 
+
+  
+
+prepend scripts
+  script(src=`${CWD}vendors/fontawesome/all.min.js`)
+  script(src=`${CWD}vendors/lodash/lodash.min.js`)
+  script(src=`https://polyfill.io/v3/polyfill.min.js?features=window.scroll`)
+ 
+
+  script(src=`https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js`)
+  script(src=`${CWD}vendors/imagesloaded/imagesloaded.pkgd.js`)
+  script(src=`${CWD}vendors/gsap/customEase.js`)
+  script(src=`${CWD}vendors/gsap/scrollToPlugin.js`)
+  //script(src=`${CWD}vendors/gsap/drawSVGPlugin.js`)
+  
+
+block mainContent
+  +Navbar
+  block content
+   
+block afterMainContent
+

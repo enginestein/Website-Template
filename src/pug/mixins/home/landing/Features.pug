@@ -1,0 +1,40 @@
+append variables
+  -
+    var featuresnew= [
+      {
+        icon:`4.webp`,
+        title:'Mohar',
+        alt: 'Dashboard',
+        details: 'A professional watermark adder app for android.'
+      },
+      {
+        icon:`14.png`,
+        title:'MaaTi Services',
+        alt: 'seo',
+        details: 'SEO, Web development, App development and other services provided by Maa Tierra.'
+      }
+    
+    ];
+
+mixin NewFeatureItem(item)
+  .col-md-6.col-lg-3.text-center
+    - var destination = item.icon === '4.webp' ? `${CWD}mohar.html` : `${CWD}service/index.html`
+    a(href=destination)
+      img(src=`${CWD}assets/img/icons/${item.icon}` alt=`${item.alt}` style={width:'95px'})
+    h4.mt-3.lh-base #{item.title}
+    p.fs-0 #{item.details}
+
+        
+mixin Features
+  +Section#customers
+    h1.text-center.display-5.fw-semi-bold(data-zanim-xs!={delay: 0.3} data-zanim-trigger='scroll') Our Products And Services
+    p.text-center.fs-0.fs-md-1(data-zanim-xs!={delay: 0.5} data-zanim-trigger='scroll') Presenting a comprehensive selection of products crafted by Maa Tierra, with even more remarkable offerings yet to be mentioned.
+    .row.mb-4.mt-6
+      each item in featuresnew.slice(0, 4)
+        +NewFeatureItem(item)
+    .row.mb-6
+      each item in featuresnew.slice(4, 8)
+        +NewFeatureItem(item)
+    .row.mb-6
+      each item in featuresnew.slice(8, 12)
+        +NewFeatureItem(item)

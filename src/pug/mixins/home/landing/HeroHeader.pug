@@ -1,0 +1,13 @@
+mixin HeroHeader
+  section.py-7.py-lg-10#home
+    +Background({image: `${CWD}assets/img/illustration/2.png`, attrs: { style: { 'background-position': 'left top', 'background-size': 'contain'} }, className: 'bg-size' })
+    +Background({image: `${CWD}assets/img/illustration/1.png`, attrs: { style: { 'background-position': 'right top', 'background-size': 'contain'} }, className: 'd-none d-xxl-block hero-bg' })
+    .container
+      .row.align-items-center.h-100.justify-content-center.justify-content-lg-start
+        .col-md-9.col-xxl-5.text-md-start.text-center.py-6.pt-8
+          h1.fs-4.fs-md-5.fs-xxl-4(data-zanim-xs!={delay: 0.3} data-zanim-trigger='scroll') Maa Tierra
+          p.fs-1(data-zanim-xs!={delay: 0.5} data-zanim-trigger='scroll') We are a driven tech startup, passionately working on multiple projects with our small yet talented team. Our dedication fuels our pursuit of creating remarkable innovations.
+          .d-flex.flex-column.flex-sm-row.justify-content-center.justify-content-md-start.mt-5(data-zanim-xs!={delay: 0.5} data-zanim-trigger='scroll')
+            a.btn.btn-sm.btn-primary.me-1(href='#customers' role='button') View Products
+            a.btn.btn-sm.btn-default(href='mailto:maatierra@outlook.com' role='button') Questions? Talk to our team
+              i.fas.fa-arrow-right.ms-2

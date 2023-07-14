@@ -1,0 +1,50 @@
+append variables
+  -
+    var features= [
+      {
+        icon:`1.png`,
+        title:'',
+        alt: 'Sum',
+        details: 'Incredible results! Maa Tierra exceeded our expectations and helped us achieve remarkable growth.'
+      },
+      {
+        icon:`1.png`,
+        title:'',
+        alt: 'Sum',
+        details: 'Prompt support, attention to detail, and exceptional results. Highly recommend Maa Tierra.'
+      },
+      {
+        icon:`1.png`,
+        title:'',
+        alt: 'Sum',
+        details: 'Best decision we made. Maa Tierra transformed our business and delivered outstanding results.'
+      }
+    ];
+    var texting= [
+      {
+        title: 'Our Client Testimonials',
+        alt: 'text',
+        details: 'Find out why our clients trust and recommend our company through their testimonials.'
+      }
+    ]
+mixin FeatureItem(item) 
+  .col-md-6
+    .w-100.h-100.p-5.services-card-shadow.rounded-4
+      img(src=`${CWD}assets/img/icons/${item.icon}` alt=`${item.alt}` style={width:'95px'})
+      h3.mt-3.lh-base #{item.title}
+      p.mb-0 #{item.details}
+mixin Card(text)
+  .col-md-6.h-100.text-center.text-md-start.p-0.p-md-5.pb-3
+    h2.mt-3 #{text.title}
+    p.mb-0 #{text.details}
+        
+mixin Services
+  +Section#product
+    .row.mb-4
+      +Card(texting[0]) 
+      +FeatureItem(features[0]) 
+    .row.mb-4
+      +FeatureItem(features[1]) 
+      +FeatureItem(features[2])
+
+

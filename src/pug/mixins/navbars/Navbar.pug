@@ -1,0 +1,21 @@
+mixin Navbar
+  nav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3(data-navbar-on-scroll='light')
+    .container
+      a.navbar-brand(href='index.html')
+          img(src=`${CWD}assets/img/icons/Logo.png` height="50"  alt='logo')
+
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse.border-top.border-lg-0.mt-4.mt-lg-0
+        ul.navbar-nav.ms-auto.pt-2.pt-lg-0.font-base.align-items-center
+          li.nav-item
+            a.nav-link.px-3(href='#customers') Product
+          li.nav-item
+            a.nav-link.px-3(href='#product') Testimonial
+          li.nav-item
+            a.nav-link.px-3(href='#pricing') Commitment 
+          li.nav-item
+            a.nav-link.pl-3.me-3(href='#docs') About 
+        button.btn.btn-primary Sign Up
+          
+
