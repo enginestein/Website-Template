@@ -23,7 +23,7 @@
     "@mr-hope/gulp-sass": "^2.0.0",
     "ansi": "^0.3.1",
     "broken-link-checker": "^0.7.8",
-    "browser-sync": "^2.26.10",
+    "browser-sync": "^2.29.3",
     "cross-env": "^7.0.2",
     "cross-var": "^1.1.0",
     "del": "^6.0.0",
